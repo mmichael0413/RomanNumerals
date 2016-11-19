@@ -16,10 +16,6 @@ class RomanNumerals
     1    => 'I'
   }
 
-  def initialize
-    run!
-  end
-
   def run!
     number = welcome!
     if invalid?(number)
@@ -38,10 +34,6 @@ class RomanNumerals
     end
   end
 
-  def exact_match?(number)
-    NUMERALS.key?(number)
-  end
-
   def invalid?(number)
     !number.is_a?(Integer) || number < 0 || number > 3000
   end
@@ -57,4 +49,4 @@ class RomanNumerals
 
 end
 
-RomanNumerals.new
+RomanNumerals.new.run!
